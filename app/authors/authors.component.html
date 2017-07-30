@@ -1,0 +1,17 @@
+<h2> Authors </h2>
+{{ title }} <br/>
+<h3>{{ name }}</h3>
+<ul>\
+    <li *ngFor= "#author of authors">
+        {{ author }}
+    </li>
+</ul>
+<form>
+    <label> Name: </label><br/>
+    <input type="text" name="name" [(ngModel)]="name" />
+</form>
+<button (click)="getPostsData()"> Show Posts </button>
+<div *ngFor="#post of posts">
+    <h3>{{post.id}}  {{ post.title }} </h3>
+    <p>{{ post.body}} <p>
+</div>
