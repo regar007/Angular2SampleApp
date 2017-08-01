@@ -1,0 +1,16 @@
+<br/>
+<button (click)="toggleCourses()">{{showCourses ? "Hide Courses" : "Show Course" }}</button>
+<div *ngIf="showCourses">
+  <h2>Courses</h2>
+  {{ title }}
+  <input type="text" autoGrow />
+  <ul>
+    <li *ngFor="let course of courses; let i = index">
+      {{ course }} <button (click)="deleteCourse(i)">x</button>
+    </li>
+  </ul>
+  <form (submit)="addCourse(course.value)">
+    <label>Add Course</label><br/>
+    <input type="text" #course /><br/>
+  </form>
+</div>
