@@ -11,17 +11,23 @@ import { AuthorService } from './services/author.service'
 import { PostsService } from './services/posts.service';
 import { CourseService } from './services/course.service'
 
+// directives
+import { AutoGrowDirective } from './directives/auto-grow.directive'
+
 // components
 import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { CoursesComponent } from './courses/courses.component'
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    AutoGrowDirective,
+
     AuthorsComponent,
-    CoursesComponent
+    CoursesComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,7 @@ import { CoursesComponent } from './courses/courses.component'
     HttpModule
   ],
   providers: [
-    AuthorService, 
+    AuthorService,
     PostsService,
     CourseService,
   ],

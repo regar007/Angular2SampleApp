@@ -3,14 +3,13 @@
 <div *ngIf="showCourses">
   <h2>Courses</h2>
   {{ title }}
-  <input type="text" autoGrow />
   <ul>
     <li *ngFor="let course of courses; let i = index">
-      {{ course }} <button (click)="deleteCourse(i)">x</button>
+      {{ course }} &nbsp;&nbsp;&nbsp;&nbsp; <button (click)="deleteCourse(i)">x</button>
     </li>
   </ul>
-  <form (submit)="addCourse(course.value)">
+  <form (submit)="addCourse(newCourse.value)">
     <label>Add Course</label><br/>
-    <input type="text" #course /><br/>
+    <input type="text" autoGrow #newCourse /><br/>
   </form>
 </div>
